@@ -1,0 +1,12 @@
+.order{
+background-color:black;
+color:white;
+text-align:center;
+}
+.CheckOut{
+	margin-top:150px;
+	margin-left:600px;
+}
+.hidden{
+	display:none;
+}

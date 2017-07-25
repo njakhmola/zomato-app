@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zomato</title>
+<link rel="stylesheet" href="style.css">
+<script src="js/jquery.js"></script>
+
+</head>
+<body>
+<div class="order">
+<h1>Zomato Ordering</h1>
+</div>
+  <div class="item">
+    <img src="http://www.pomodorospizzas.com/wp-content/uploads/2016/06/Amazing-Pizza-Picture-HD-1.jpg" width="1340px" height="600px" >
+  </div>
+
+ 
+  <h2>Find the best restaurants, cafés, and bars in Delhi NCR</h2>
+<div class="item_zero">
+<div class="item_one" style="width:300px; float:left; height:300px; margin:10px;">
+    <img class="img1" src="https://media-cdn.tripadvisor.com/media/photo-s/0a/98/c6/37/domino-s-pizza.jpg" width="300px" height="300px"  >
+    <div class="menu1">
+    <ul >
+          <li><input id="checkBox" type="checkbox">Farm House</li>
+        <li><input id="checkBox" type="checkbox">Peppy Paneer</li>
+          <li><input id="checkBox" type="checkbox">Delux Veggie</li>
+            <li><input id="checkBox" type="checkbox">Cheese n Corn</li>
+        </ul>
+      </div>
+      </div>
+
+
+
+      <div class="item_two" style="width:300px; float:left; height:300px; margin:10px;">
+            <img class="img2" src="http://omikronmx.com/img/port/kfc.jpg"width="300px" height="300px">
+            <div class="menu2">
+              <ul>
+            <li><input id="checkBox" type="checkbox">Potato Krisper</li>
+              <li><input id="checkBox" type="checkbox">Paneer Zinger</li>
+                <li><input id="checkBox" type="checkbox">Chicken Zinger</li>
+                <li><input id="checkBox" type="checkbox">Popcorn Chicken</li>
+              </ul>
+            </div>
+            </div>
+
+
+            <div class="item_three" style="width:300px; float:left; height:300px; margin:10px;">
+                <img class="img3" src="http://www.slate.com/content/dam/slate/articles/technology/technology/2013/12/131220_TECH_Viva-la-Pizza-p114.jpg.CROP.original-original.jpg"width="300px" height="300px">
+                <div class="menu3">
+                  <ul>
+
+                  <li><input id="checkBox" type="checkbox">Exotic</li>
+                    <li><input id="checkBox" type="checkbox">Country Feast</li>
+                      <li><input id="checkBox" type="checkbox">Tandoori Paneer</li>
+                      <li><input id="checkBox" type="checkbox">Veggie Lover</li>
+                    </ul>
+                  </div>
+                  </div>
+
+
+
+                  <div class="item_four" style="width:300px; float:left; height:300px; margin:10px;">
+                      <img class="img4" src="https://media-cdn.tripadvisor.com/media/photo-s/06/bc/eb/e7/khan-chacha.jpg"width="300px" height="300px">
+                      <div class="menu4">
+                        <ul>
+                        <li><input id="checkBox" type="checkbox">Mango Craze </li>
+                          <li><input id="checkBox" type="checkbox">Rainbow Pop</li>
+                            <li><input id="checkBox" type="checkbox">Choco Love Bite</li>
+                            <li><input id="checkBox" type="checkbox">All About Love</li>
+                          </ul>
+                        </div>
+                        </div>
+</div>
+
+<button class="CheckOut">Check Out</button>
+</body>
+<script>
+$('.img1').on('click',function(){
+  $('.menu1').toggleClass("hidden");
+  $('.menu2').addClass("hidden");
+  $('.menu3').addClass("hidden");
+  $('.menu4').addClass("hidden");
+});
+</script>
+
+
+<script>
+$('.img2').on('click',function(){
+  $('.menu1').addClass("hidden");
+  $('.menu2').toggleClass("hidden");
+  $('.menu3').addClass("hidden");
+  $('.menu4').addClass("hidden");
+});
+</script>
+
+
+<script>
+$('.img3').on('click',function(){
+  $('.menu1').addClass("hidden");
+  $('.menu2').addClass("hidden");
+  $('.menu3').toggleClass("hidden");
+  $('.menu4').addClass("hidden");
+});
+</script>
+   
+   
+<script>
+$('.img4').on('click',function(){
+  $('.menu1').addClass("hidden");
+  $('.menu2').addClass("hidden");
+  $('.menu3').addClass("hidden");
+  $('.menu4').toggleClass("hidden");
+});
+</script>
+
+<script>
+ $('button').on('click',function(){
+   if($('input:checkbox:checked').length>0){
+     alert("Thank you for ordering.Your order has been ordered");
+     console.log(str($('input:checkbox:checked').length) + "items are selected");
+     console.log($('input:checkbox:checked'));
+   }
+   else{
+      alert("You have not selected any food item");
+   }
+});
+</script>
+
+
+</script>
+
+</html>
